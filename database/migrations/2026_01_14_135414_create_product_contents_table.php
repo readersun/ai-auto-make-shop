@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('product_contents', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->string('seo_title');
-            $table->text('header_copy');
-            $table->json('key_features');
-            $table->text('recommendation');
+            $table->string('seo_title')->nullable();
+            $table->text('header_copy')->nullable();
+            $table->json('key_features')->nullable();
+            $table->text('recommendation')->nullable();
             $table->text('usage_guide')->nullable();
             $table->text('precautions')->nullable();
             $table->text('shipping_info')->nullable();

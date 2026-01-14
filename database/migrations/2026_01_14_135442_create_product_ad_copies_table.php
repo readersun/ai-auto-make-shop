@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->string('platform');
-            $table->text('copy_text');
-            $table->integer('character_count')->default(0);
+            $table->string('headline');
+            $table->text('description');
+            $table->integer('variation')->default(1);
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

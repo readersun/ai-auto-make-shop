@@ -14,7 +14,7 @@ class OpenAIService
     {
         try {
             $response = OpenAI::chat()->create([
-                'model' => $options['model'] ?? 'gpt-4',
+                'model' => $options['model'] ?? 'gpt-4o-mini',
                 'messages' => [
                     ['role' => 'system', 'content' => $options['system'] ?? 'You are a helpful assistant.'],
                     ['role' => 'user', 'content' => $prompt],
@@ -37,7 +37,7 @@ class OpenAIService
     {
         try {
             $response = OpenAI::chat()->create([
-                'model' => $options['model'] ?? 'gpt-4',
+                'model' => $options['model'] ?? 'gpt-4o-mini',
                 'messages' => [
                     ['role' => 'system', 'content' => $options['system'] ?? 'You are a helpful assistant. Always respond with valid JSON.'],
                     ['role' => 'user', 'content' => $prompt],
@@ -67,7 +67,7 @@ class OpenAIService
     {
         try {
             $response = OpenAI::chat()->create([
-                'model' => $options['model'] ?? 'gpt-4',
+                'model' => $options['model'] ?? 'gpt-4o-mini',
                 'messages' => $messages,
                 'temperature' => $options['temperature'] ?? 0.7,
                 'max_tokens' => $options['max_tokens'] ?? 2000,

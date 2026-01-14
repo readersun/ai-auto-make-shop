@@ -97,7 +97,6 @@ class ProductPlannerService
 EOT;
 
         $result = $this->openAI->generateJson($prompt, [
-            'model' => 'gpt-4',
             'temperature' => 0.8,
             'system' => '당신은 창의적이고 현실적인 상품 기획 전문가입니다. 트렌드를 반영하면서도 실현 가능한 아이디어를 제안합니다.',
         ]);
@@ -148,7 +147,6 @@ EOT;
 EOT;
 
         $result = $this->openAI->generateJson($prompt, [
-            'model' => 'gpt-4',
             'temperature' => 0.5,
             'system' => '당신은 정확한 원가 분석 전문가입니다. 시장 조사를 바탕으로 현실적인 원가를 산출합니다.',
         ]);
@@ -195,7 +193,6 @@ JSON 형식으로 제공해주세요:
 EOT;
 
         $result = $this->openAI->generateJson($prompt, [
-            'model' => 'gpt-4',
             'temperature' => 0.7,
             'system' => '당신은 전문 카피라이터입니다. 고객의 마음을 사로잡는 매력적인 상품 설명을 작성합니다.',
         ]);
@@ -254,7 +251,6 @@ EOT;
 EOT;
 
         $result = $this->openAI->generateJson($prompt, [
-            'model' => 'gpt-4',
             'temperature' => 0.8,
             'system' => '당신은 디지털 마케팅 전문가입니다. 각 광고 플랫폼의 특성을 이해하고 클릭률을 높이는 문구를 작성합니다.',
         ]);
